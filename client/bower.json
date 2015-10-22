@@ -1,0 +1,36 @@
+{
+  "name": "shopping-list",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "^1.3.0",
+    "bootstrap": "^3.2.0",
+    "angular-animate": "^1.3.0",
+    "angular-sanitize": "^1.3.0",
+    "angular-ui-router": "~0.2.15",
+    "angular-bootstrap": "~0.14.2",
+    "ngToast": "ngtoast#~1.5.6",
+    "satellizer": "~0.12.5",
+    "angular-permission": "~1.1.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.3.0"
+  },
+  "appPath": "app",
+  "moduleName": "shoppingListApp",
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    },
+    "ngToast": {
+      "main": [
+        "dist/ngToast.css",
+        "dist/ngToast-animations.css",
+        "dist/ngToast.js"
+      ]
+    }
+  }
+}
