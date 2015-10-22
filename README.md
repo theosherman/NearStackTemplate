@@ -1,12 +1,16 @@
-# near-stack-template
+# NEAR Stack Template
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.12.1.
+Starter project template that employs the following technology stack:
 
-## Build & development
+ - Node
+ - Express
+ - Angular
+ - RethinkDB
+
+### Notes
+
+A JWT token membership system is used to authenticate along with role based authorization on both client and server.
+
+### Build & development
 
 Run `grunt` for building and `grunt serve` for preview.
-
-## Testing
-
-Running `grunt test` will run the unit tests with karma.
