@@ -7,11 +7,11 @@ var jwt = require('jsonwebtoken');
 var utility = require('../../utility');
 var User = require('../../schema/user');
 
-app.post('/login', function(req, res) {
-	User.filter({email: req.body.email}).run().then(function(users) {
+app.post('/login', (req, res) => {
+	User.filter({email: req.body.email}).run().then((users) => {
 		if (users.length == 1) {
 			var user = users[0];
-			bcrypt.compare(req.body.password, user.password, function(err, isMatch) {
+			bcrypt.compare(req.body.password, user.password, (err, isMatch) => {
 				if (err) {
 					utility.handleErrorResponse(res, err);
 				} else if (isMatch) {
@@ -24,7 +24,7 @@ app.post('/login', function(req, res) {
 		}
 		else
 			utility.denyAccess(res);
-	}).error(function(err) {
+	}).error((err) => {
 		utility.handleErrorResponse(res, err);
 	});
 });

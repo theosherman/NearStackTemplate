@@ -15,11 +15,11 @@ var User = thinky.createModel("User", {
 
 User.ensureIndex('email');
 
-User.post('save', function() {
+User.post('save', () => {
     delete this.password;
 });
 
-User.defineStatic("getView", function() {
+User.defineStatic("getView", () => {
     return this.without('password');
 });
 

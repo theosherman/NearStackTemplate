@@ -11,7 +11,7 @@ var config = require('./config');
 app.use(morgan('combined'));
 app.use(cors());
 app.use(jwt({ secret: 'secret' }).unless({ path: ['/api/auth/login']}));
-app.use(function(err, req, res, next) {
+app.use((err, req, res, next) => {
 	if (err.name === 'UnauthorizedError')
 		res.status(err.status).send({message: err.message});
 });
